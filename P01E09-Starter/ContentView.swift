@@ -35,13 +35,17 @@ struct ContentView: View {
   var body: some View {
 
         VStack {
-          Stepper(onIncrement: {
-            self.orderCount += 1
-          }, onDecrement: {
-            self.orderCount -= 1
-          }) {
-            Text("Set order amount")
-          }
+//          Stepper(onIncrement: {
+//            self.orderCount += 1
+//          }, onDecrement: {
+//            self.orderCount -= 1
+//          }) {
+//            Text("Set order amount")
+//          }
+          
+          Stepper("Set order amount", value: $orderCount)
+          Text("Current order amout: \(orderCount)")
+          
         }
   }
 }
