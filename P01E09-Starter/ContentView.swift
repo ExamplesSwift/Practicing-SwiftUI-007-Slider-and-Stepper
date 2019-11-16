@@ -29,17 +29,20 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  @State private var orderCount = 0
+  
   var body: some View {
 
         VStack {
           Stepper(onIncrement: {
-            
+            self.orderCount += 1
           }, onDecrement: {
-            
+            self.orderCount -= 1
           }) {
             Text("Set order amount")
           }
-        }    
+        }
   }
 }
 
