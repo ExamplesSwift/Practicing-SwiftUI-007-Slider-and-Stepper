@@ -47,7 +47,7 @@ struct ContentView: View {
           Stepper("Set order amount", value: $orderCount)
           Text("Current order amout: \(orderCount)")
          
-          Slider(value: $houseTempetature)
+          Slider(value: $houseTempetature, in: (30...120))
           Text("\(houseTempetature)")
         }
   }
