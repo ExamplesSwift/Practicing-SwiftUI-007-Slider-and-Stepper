@@ -31,6 +31,7 @@ import SwiftUI
 struct ContentView: View {
   
   @State private var orderCount = 0
+  @State private var houseTempetature: Double = 0
   
   var body: some View {
 
@@ -45,7 +46,9 @@ struct ContentView: View {
           
           Stepper("Set order amount", value: $orderCount)
           Text("Current order amout: \(orderCount)")
-          
+         
+          Slider(value: $houseTempetature)
+          Text("\(houseTempetature)")
         }
   }
 }
