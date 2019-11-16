@@ -31,9 +31,15 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
 
-        Text("Set order amount")
-
-    
+        VStack {
+          Stepper(onIncrement: {
+            
+          }, onDecrement: {
+            
+          }) {
+            Text("Set order amount")
+          }
+        }    
   }
 }
 
